@@ -41,15 +41,20 @@ What does this dask.delayed function do? One of the key pieces of Dask is its Ta
 
 For this advanced tutorial program we will demonstrate an image processing application of Dask.  We will be taking an input image, splitting it into chunks, and performing a grayscale transformation to each chunk before rearranging it back into an output image.  This tutorial can be followed along here or on the Dask website found [here](https://examples.dask.org/applications/image-processing.html).
 
-Input:
+
 ![input image](https://github.com/jwritz-uwl/cs-470-dask/blob/main/images/astronaut.png)
 
-Output:
-![output image](https://github.com/jwritz-uwl/cs-470-dask/images/astronaut_grayscale.png)
+![output image](https://github.com/jwritz-uwl/cs-470-dask/images/blob/main/astronaut_grayscale.png)
 
 
 1. First make sure that these dependencies are installed as we will need them all for the later steps.
     - `pip install dask_image`
     - `pip install -U matplotlib`
     - `pip install scikit-image --upgrade-strategy only-if-needed`
-2. 
+2. The next step is creating a folder where we will manipulate these images.  For this example, we will make a folder within our project directory named images.  This can be done easily with `mkdir images`.
+3. Now, we will run `import_images.py` which will split up our astronaut image into four equal sized chunks to be parallelly processed.  The output of this program will be those four images in the images folder we created in the previous step.
+
+![corner image](https://github.com/jwritz-uwl/cs-470-dask/blob/main/images/image-00.png)
+
+4. Lastly, all we have to do to process this image is to run `grayscale.py`.  The first part of this program is a method called pixelTransform(rgb) which returns an array of grayscale values corresponding to their color equivalents.  Next, the image data is read into a list of images that match the pattern specified.  This list is fed into the pixelTransform method where all the parallelized work is done.  Finally, we can combine this data back into one image to be displayed with matplotlib.
+5. Additional effects can be achieved by playing around with the pixelTransform method.  For some practice you can try and extract only certain bands of color from the image to see what those results look like.  An example of extracting just the red band can be found [here](https://github.com/jwritz-uwl/cs-470-dask/blob/main/red_extract.py).
