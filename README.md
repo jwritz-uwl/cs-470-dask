@@ -44,7 +44,7 @@ For this advanced tutorial program we will demonstrate an image processing appli
 
 ![input image](https://github.com/jwritz-uwl/cs-470-dask/blob/main/images/astronaut.png)
 
-![output image](https://github.com/jwritz-uwl/cs-470-dask/images/blob/main/astronaut_grayscale.png)
+![output image](https://github.com/jwritz-uwl/cs-470-dask/images/blob/main/images/astronaut_grayscale.png)
 
 
 1. First make sure that these dependencies are installed as we will need them all for the later steps.
