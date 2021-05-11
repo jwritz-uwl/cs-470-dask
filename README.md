@@ -42,7 +42,7 @@ What does this dask.delayed function do? One of the key pieces of Dask is its Ta
 For this advanced tutorial program we will demonstrate an image processing application of Dask.  We will be taking an input image, splitting it into chunks, and performing a grayscale transformation to each chunk before rearranging it back into an output image.  This tutorial can be followed along here or on the Dask website found [here](https://examples.dask.org/applications/image-processing.html).
 
 Input:
-![input image](https://github.com/jwritz-uwl/cs-470-dask/images/astronaut.png)
+![input image](https://github.com/jwritz-uwl/cs-470-dask/blob/main/images/astronaut.png)
 
 Output:
 ![output image](https://github.com/jwritz-uwl/cs-470-dask/images/astronaut_grayscale.png)
