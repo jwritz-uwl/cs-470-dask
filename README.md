@@ -29,7 +29,7 @@ Dask is a parallel computing library for Python. One of Dask’s key features is
 
 ## Hello World
 
-This simple Hello World program `hello_world.py` demonstrates the basic capabilities of Dask by printing some words. This example program is based on Dask’s Delayed example, which can be found [here](https://docs.dask.org/en/latest/delayed.html).
+This simple Hello World program `hello_world.py` demonstrates the basic capabilities of Dask by printing some words. This example program is based on Dask’s Delayed example, which can be found [here](https://docs.dask.org/en/latest/delayed.html). Additional explanation and examples can be seen in this [video](https://www.youtube.com/watch?v=Alwgx_1qsj4), which discusses the Delayed function and its application in data processing and machine learning.
 
 1. First, download the `hello_world.py` program from this repo, located [here](https://github.com/jwritz-uwl/cs-470-dask/blob/main/hello_world.py).
 2. Run the program as is. If you are using a terminal/command prompt use `python hello_world.py` in the directory containing the program. If you are using Visual Studio Code, simply open the program and click the green "Run" triangle in the top right corner of the window. This will print "Hello World!", "Hello", "World", and "hello world". "Hello" and "World" may vary in order, for similar reasons that we saw when using pthreads.
@@ -48,9 +48,13 @@ For this advanced tutorial program we will demonstrate an image processing appli
 
 
 1. First make sure that these dependencies are installed as we will need them all for the later steps.
+
     a. `pip install dask_image`
+    
     b. `pip install -U matplotlib`
+    
     c. `pip install scikit-image --upgrade-strategy only-if-needed`
+    
 2. The next step is creating a folder where we will manipulate these images.  For this example, we will make a folder within our project directory named images.  This can be done easily with `mkdir images`.
 3. Now, we will run `import_images.py` which will split up our astronaut image into four equal sized chunks to be parallelly processed.  The output of this program will be those four images in the images folder we created in the previous step.
 
