@@ -38,3 +38,18 @@ This simple Hello World program `hello_world.py` demonstrates the basic capabili
 What does this dask.delayed function do? One of the key pieces of Dask is its Task Graph. The Task Graph is a graph (similar to a flow chart) with nodes that represent different tasks. The delayed function is used to create a graph. When x and y are assigned, they each are their own graph since they are not connected. When z is assigned however, since both x and y are parameters, and hence required to occur before say in z, they are connected to z in its graph. When z.compute is called, the graph is worked through, so before z’s function can be called x and y’s must be called first. 
 
 ## Advanced Tutorial
+
+For this advanced tutorial program we will demonstrate an image processing application of Dask.  We will be taking an input image, splitting it into chunks, and performing a grayscale transformation to each chunk before rearranging it back into an output image.  This tutorial can be followed along here or on the Dask website found [here](https://examples.dask.org/applications/image-processing.html).
+
+Input:
+![input image](https://github.com/jwritz-uwl/cs-470-dask/images/astronaut.png)
+
+Output:
+![output image](https://github.com/jwritz-uwl/cs-470-dask/images/astronaut_grayscale.png)
+
+
+1. First make sure that these dependencies are installed as we will need them all for the later steps.
+    - `pip install dask_image`
+    - `pip install -U matplotlib`
+    - `pip install scikit-image --upgrade-strategy only-if-needed`
+2. 
